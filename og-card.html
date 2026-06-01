@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  ══════════════════════════════════════════════════════════
+  OG IMAGE GENERATOR — Chloe Mandel
+
+  HOW TO EXPORT (Chrome):
+  1. Open this file in Chrome.
+  2. Open DevTools (Cmd+Option+I).
+  3. In the Elements panel, click the <div id="card"> element.
+  4. Right-click it → "Capture node screenshot".
+  5. Chrome saves a perfect 1200×630 PNG automatically.
+  6. Move that file to /images/ and rename it og-image.jpg.
+  7. In index.html, uncomment the two og:image meta tags.
+  ══════════════════════════════════════════════════════════
+-->
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 40px;
+      font-family: 'Cinzel', Georgia, serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── The card — everything is relative to this ──── */
+
+    #card {
+      width: 1200px;
+      height: 630px;
+      flex-shrink: 0;
+      background: #07070e;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ── Atmosphere ─────────────────────────────────── */
+
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .glow--crimson {
+      width: 700px;
+      height: 700px;
+      top: -200px;
+      left: -120px;
+      background: radial-gradient(circle, rgba(139, 26, 26, 0.28) 0%, transparent 65%);
+    }
+
+    .glow--gold {
+      width: 500px;
+      height: 500px;
+      top: -120px;
+      right: -60px;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.07) 0%, transparent 65%);
+    }
+
+    .glow--deep {
+      width: 900px;
+      height: 400px;
+      bottom: -160px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: radial-gradient(ellipse, rgba(139, 26, 26, 0.1) 0%, transparent 65%);
+    }
+
+    /* ── Frame ──────────────────────────────────────── */
+
+    .frame {
+      position: absolute;
+      inset: 36px;
+      border: 1px solid rgba(201, 162, 39, 0.18);
+      pointer-events: none;
+    }
+
+    .frame::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(201, 162, 39, 0.07);
+    }
+
+    .corner {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+    }
+
+    .corner--tl { top: -1px;  left: -1px;  border-top: 2px solid #c9a227; border-left: 2px solid #c9a227; }
+    .corner--tr { top: -1px;  right: -1px; border-top: 2px solid #c9a227; border-right: 2px solid #c9a227; }
+    .corner--bl { bottom: -1px; left: -1px;  border-bottom: 2px solid #c9a227; border-left: 2px solid #c9a227; }
+    .corner--br { bottom: -1px; right: -1px; border-bottom: 2px solid #c9a227; border-right: 2px solid #c9a227; }
+
+    /* ── Content ────────────────────────────────────── */
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .monogram {
+      font-family: 'Cinzel Decorative', Georgia, serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: rgba(201, 162, 39, 0.22);
+      letter-spacing: 0.14em;
+      margin-bottom: 26px;
+    }
+
+    .badge {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 11px;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: rgba(181, 42, 42, 0.85);
+      border: 1px solid rgba(181, 42, 42, 0.3);
+      padding: 6px 20px;
+      margin-bottom: 34px;
+    }
+
+    .name {
+      font-family: 'Cinzel Decorative', Georgia, serif;
+      font-size: 90px;
+      font-weight: 700;
+      color: #e4ddd3;
+      letter-spacing: 0.04em;
+      line-height: 1;
+      text-shadow:
+        0 0 80px rgba(201, 162, 39, 0.14),
+        0 0 160px rgba(139, 26, 26, 0.08);
+      margin-bottom: 28px;
+    }
+
+    .rule {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+
+    .rule-line {
+      width: 130px;
+      height: 1px;
+      background: rgba(201, 162, 39, 0.22);
+    }
+
+    .rule-glyph {
+      color: rgba(201, 162, 39, 0.5);
+      font-size: 13px;
+    }
+
+    .genre {
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: 13px;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: #c9a227;
+      margin-bottom: 20px;
+    }
+
+    .hook {
+      font-family: 'EB Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: 22px;
+      color: rgba(154, 143, 131, 0.5);
+      letter-spacing: 0.02em;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="card">
+    <div class="glow glow--crimson"></div>
+    <div class="glow glow--gold"></div>
+    <div class="glow glow--deep"></div>
+
+    <div class="frame">
+      <div class="corner corner--tl"></div>
+      <div class="corner corner--tr"></div>
+      <div class="corner corner--bl"></div>
+      <div class="corner corner--br"></div>
+    </div>
+
+    <div class="content">
+      <p class="monogram">CM</p>
+      <p class="badge">Debut Novel &mdash; Coming Soon</p>
+      <h1 class="name">Chloe Mandel</h1>
+      <div class="rule">
+        <span class="rule-line"></span>
+        <span class="rule-glyph">✦</span>
+        <span class="rule-line"></span>
+      </div>
+      <p class="genre">Dark Gothic Fantasy</p>
+      <p class="hook">Where the beautiful things bleed.</p>
+    </div>
+  </div>
+
+</body>
+</html>
