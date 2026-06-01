@@ -422,41 +422,30 @@ a:hover { color: var(--gold-bright); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-eyebrow {
+.hero-label {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--crimson-bright);
+  border: 1px solid rgba(181, 42, 42, 0.35);
+  padding: 0.3rem 1.1rem;
+  margin-bottom: 2.25rem;
+}
+
+.hero-hook {
   font-family: var(--font-body);
   font-style: italic;
-  font-size: clamp(0.9rem, 2vw, 1.05rem);
-  color: var(--text-dim);
-  letter-spacing: 0.08em;
-  margin-bottom: 1.75rem;
-}
-
-.hero-name {
-  font-family: var(--font-display);
-  font-size: clamp(3.25rem, 11vw, 7.5rem);
   font-weight: 400;
-  line-height: 1.05;
-  letter-spacing: 0.03em;
+  font-size: clamp(2.75rem, 8vw, 5.75rem);
+  line-height: 1.12;
   color: var(--text);
-  margin-bottom: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.1em;
+  letter-spacing: 0.01em;
+  margin-bottom: 2rem;
   text-shadow:
-    0 0 60px rgba(201, 162, 39, 0.12),
+    0 0 60px rgba(201, 162, 39, 0.1),
     0 0 120px rgba(139, 26, 26, 0.08);
-}
-
-.hero-name-first {
-  display: block;
-  font-weight: 400;
-}
-
-.hero-name-last {
-  display: block;
-  font-weight: 700;
-  color: var(--text);
 }
 
 .hero-rule {
@@ -464,7 +453,7 @@ a:hover { color: var(--gold-bright); }
   align-items: center;
   justify-content: center;
   gap: 1.25rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .hero-rule-line {
@@ -484,13 +473,27 @@ a:hover { color: var(--gold-bright); }
   opacity: 0.55;
 }
 
-.hero-tagline {
+.hero-byline {
   font-family: var(--font-heading);
-  font-size: clamp(0.65rem, 1.5vw, 0.78rem);
-  letter-spacing: 0.38em;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.hero-byline strong {
   color: var(--gold);
-  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.hero-genre {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-faint);
+  letter-spacing: 0.04em;
+  margin-top: 0.35rem;
+  margin-bottom: 2.75rem;
 }
 
 .hero-actions {
