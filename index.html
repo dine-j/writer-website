@@ -189,6 +189,54 @@
       </div>
     </section>
 
+    <!-- ══════════════════════════════
+         NEWSLETTER
+    ══════════════════════════════ -->
+    <section id="newsletter" class="section section--newsletter fade-in">
+      <div class="newsletter-atmosphere" aria-hidden="true"></div>
+      <div class="container">
+        <div class="newsletter-inner">
+
+          <div class="newsletter-content">
+            <span class="section-eyebrow">Don't miss a word</span>
+            <h2 class="newsletter-title">Want more?</h2>
+            <p class="newsletter-desc">
+              Be the first to hear about the book &mdash; cover reveals, release dates and other updates from beyond the mists.
+            </p>
+          </div>
+
+          <!--
+            Kit (ConvertKit) form.
+            1. Log in to kit.com and create a form.
+            2. Replace YOUR_FORM_ID below with the numeric ID from your form's settings.
+            That's it — Kit handles everything else.
+          -->
+          <form class="newsletter-form"
+                action="https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions"
+                method="post"
+                novalidate>
+            <div class="newsletter-fields">
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <input
+                type="email"
+                id="newsletter-email"
+                name="email_address"
+                placeholder="your@email.com"
+                required
+                autocomplete="email"
+                class="newsletter-input"
+              >
+              <button type="submit" class="btn btn--primary newsletter-submit">
+                Subscribe
+              </button>
+            </div>
+            <p class="newsletter-note">No spam. Unsubscribe anytime.</p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- ══════════════════════════════
@@ -213,6 +261,7 @@
           <a href="#home">Home</a>
           <a href="#books">Books</a>
           <a href="#about">About</a>
+          <a href="#newsletter">Newsletter</a>
         </nav>
 
         <div class="footer-social" aria-label="Social media">
