@@ -234,26 +234,26 @@
           </div>
 
           <!--
-            Kit (ConvertKit) form.
-            1. Log in to kit.com and create a form.
-            2. Replace YOUR_FORM_ID below with the numeric ID from your form's settings.
-            That's it — Kit handles everything else.
+            EmailOctopus embedded form.
+            1. Log in to EmailOctopus and go to Lists → your list → Forms → Embedded.
+            2. Copy the list UUID from the form action URL and replace YOUR_LIST_ID below.
+            That's it — EmailOctopus handles everything else.
           -->
           <form class="newsletter-form"
-                action="https://app.convertkit.com/forms/YOUR_FORM_ID/subscriptions"
-                method="post"
-                novalidate>
+                action="https://emailoctopus.com/lists/YOUR_LIST_ID/members/embedded/1.3/add"
+                method="post">
             <div class="newsletter-fields">
               <label for="newsletter-email" class="sr-only">Email address</label>
               <input
                 type="email"
                 id="newsletter-email"
-                name="email_address"
+                name="field_0"
                 placeholder="your@email.com"
                 required
                 autocomplete="email"
                 class="newsletter-input"
               >
+              <input type="hidden" name="successRedirectUrl" value="">
               <button type="submit" class="btn btn--primary newsletter-submit">
                 Subscribe
               </button>
