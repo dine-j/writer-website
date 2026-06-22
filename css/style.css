@@ -728,7 +728,6 @@ a:hover { color: var(--gold-bright); }
 }
 
 .book-blurb {
-  font-style: italic;
   color: var(--text-dim);
   font-size: 1rem;
   line-height: 1.65;
