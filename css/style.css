@@ -184,6 +184,7 @@ a:hover { color: var(--gold-bright); }
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 }
 
 .section-rule--left {
@@ -424,15 +425,28 @@ a:hover { color: var(--gold-bright); }
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
 .rule-arrow {
-  width: 220px;
+  width: 80px;
   height: auto;
   color: var(--gold);
-  opacity: 0.4;
+  opacity: 0.22;
   display: block;
+  flex-shrink: 0;
+}
+
+.hero-rule .rule-arrow {
+  width: 100px;
+}
+
+.rule-glyph {
+  color: var(--gold);
+  font-size: 0.7rem;
+  opacity: 0.5;
+  flex-shrink: 0;
 }
 
 .hero-byline {
@@ -983,16 +997,9 @@ a:hover { color: var(--gold-bright); }
   max-width: 300px;
 }
 
-.footer-rule-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border-dim);
-}
-
-.footer-rule-glyph {
-  color: var(--gold);
-  font-size: 0.65rem;
-  opacity: 0.4;
+.footer-rule .rule-arrow {
+  height: 10px;
+  width: auto;
 }
 
 .footer-nav {
