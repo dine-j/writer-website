@@ -1,0 +1,69 @@
+/* ══════════════════════════════════════════════════════════
+   THEME: Dark Gothic
+   Deep void blacks · warm parchment text · crimson & gold
+   ══════════════════════════════════════════════════════════
+
+   HOW TO CREATE A NEW THEME
+   1. Duplicate this file and rename it (e.g. ivory-light.css)
+   2. Update the @import URL for your chosen Google Fonts
+   3. Edit the base colours in the "Palette" section
+   4. Update the alpha variants below them — each comment
+      shows the opacity and which component it controls
+   5. In index.html, change the theme <link> href to your file
+   ══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root {
+  /* ── Backgrounds ─────────────────────────────────────── */
+  --bg-void:    #06060e;
+  --bg-dark:    #0b1110;
+  --bg-surface: #101815;
+  --bg-raised:  #16221e;
+
+  /* ── Text ────────────────────────────────────────────── */
+  --text:       #e7e1d4;
+  --text-dim:   #aaa394;
+  --text-muted: #7a6f65;
+  --text-faint: #655e53;
+
+  /* ── Brand colours ───────────────────────────────────── */
+  --crimson:        #1f5a43;
+  --crimson-bright: #2f8c67;
+  --gold:           #b88c24;
+  --gold-bright:    #d8b44a;
+
+  /* ── Alpha variants: gold ────────────────────────────── */
+  --gold-dim:        rgba(184, 140, 36, 0.18); /* gold 18% — existing token */
+  --gold-a05:        rgba(184, 140, 36, 0.05); /* gold  5% — book-card inset shadow */
+  --gold-a06:        rgba(184, 140, 36, 0.06); /* gold  6% — book-cover-art gradient */
+  --gold-a08:        rgba(184, 140, 36, 0.08); /* gold  8% — hero glow */
+  --gold-a10:        rgba(184, 140, 36, 0.10); /* gold 10% — hero-hook text-shadow */
+
+  /* ── Alpha variants: crimson ─────────────────────────── */
+  --crimson-a07:        rgba(31, 90, 67, 0.07); /* crimson  7% — newsletter atmosphere */
+  --crimson-a08:        rgba(31, 90, 67, 0.08); /* crimson  8% — hero-hook text-shadow */
+  --crimson-a12:        rgba(31, 90, 67, 0.12); /* crimson 12% — hero glow deep, portrait bg */
+  --crimson-a18:        rgba(31, 90, 67, 0.18); /* crimson 18% — book-cover-art gradient */
+  --crimson-a25:        rgba(31, 90, 67, 0.25); /* crimson 25% — hero glow */
+  --crimson-a40:        rgba(31, 90, 67, 0.40); /* crimson 40% — about-quote mobile border */
+  --crimson-bright-a35: rgba(31, 90, 67, 0.35); /* crimson-bright 35% — hero-label & book-badge border */
+
+  /* ── Alpha variants: backgrounds ─────────────────────── */
+  --bg-void-a70: rgba(6, 6, 14, 0.70); /* bg-void 70% — hero vignette */
+  --bg-void-a92: rgba(6, 6, 14, 0.92); /* bg-void 92% — scrolled nav background */
+  --bg-void-a97: rgba(6, 6, 14, 0.97); /* bg-void 97% — mobile nav overlay */
+
+  /* ── Alpha variants: text ────────────────────────────── */
+  --text-a25: rgba(231, 225, 212, 0.25); /* text 25% — ghost button border */
+
+  /* ── Borders ─────────────────────────────────────────── */
+  --border-dim:    rgba(184, 140, 36, 0.12);
+  --border-subtle: rgba(184, 140, 36, 0.22);
+  --border-hover:  rgba(184, 140, 36, 0.45);
+
+  /* ── Type ────────────────────────────────────────────── */
+  --font-display: 'Cinzel Decorative', 'Palatino Linotype', serif;
+  --font-heading: 'Cinzel', 'Palatino Linotype', serif;
+  --font-body:    'EB Garamond', 'Garamond', Georgia, serif;
+}

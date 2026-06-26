@@ -3,41 +3,10 @@
    Dark Gothic Fantasy Design System
    ══════════════════════════════════════════════════════════ */
 
-/* ─── TOKENS ─────────────────────────────────────────────── */
+/* ─── LAYOUT & TIMING ────────────────────────────────────── */
 
 :root {
-  /* Backgrounds */
-  --bg-void:    #06060e;
-  --bg-dark:    #0a0a17;
-  --bg-surface: #0e0e1c;
-  --bg-raised:  #131324;
-
-  /* Text */
-  --text:       #e4ddd3;
-  --text-dim:   #9a8f83;
-  --text-faint: #504840;
-
-  /* Brand colours */
-  --crimson:        #8b1a1a;
-  --crimson-bright: #b52a2a;
-  --gold:           #c9a227;
-  --gold-bright:    #e0bc45;
-  --gold-dim:       rgba(201, 162, 39, 0.18);
-
-  /* Borders */
-  --border-dim:    rgba(201, 162, 39, 0.12);
-  --border-subtle: rgba(201, 162, 39, 0.22);
-  --border-hover:  rgba(201, 162, 39, 0.45);
-
-  /* Type */
-  --font-display: 'Cinzel Decorative', 'Palatino Linotype', serif;
-  --font-heading: 'Cinzel', 'Palatino Linotype', serif;
-  --font-body:    'EB Garamond', 'Garamond', Georgia, serif;
-
-  /* Spacing */
   --section-pad: clamp(5rem, 10vw, 8rem);
-
-  /* Transitions */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --dur-fast:    0.2s;
   --dur-med:     0.35s;
@@ -160,7 +129,7 @@ a:hover { color: var(--gold-bright); }
 /* Ghost: transparent with border, no fill */
 .btn--ghost {
   background: transparent;
-  border-color: rgba(228, 221, 211, 0.25);
+  border-color: var(--text-a25);
   color: var(--text-dim);
 }
 
@@ -255,7 +224,7 @@ a:hover { color: var(--gold-bright); }
 
 .nav.is-scrolled {
   padding: 1rem 0;
-  background: rgba(6, 6, 14, 0.92);
+  background: var(--bg-void-a92);
   backdrop-filter: blur(16px) saturate(1.2);
   -webkit-backdrop-filter: blur(16px) saturate(1.2);
   border-bottom-color: var(--border-dim);
@@ -395,7 +364,7 @@ a:hover { color: var(--gold-bright); }
   height: 60vw;
   top: -15%;
   left: -15%;
-  background: radial-gradient(circle, rgba(139, 26, 26, 0.25) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--crimson-a25) 0%, transparent 70%);
   animation-delay: 0.2s;
 }
 
@@ -404,7 +373,7 @@ a:hover { color: var(--gold-bright); }
   height: 50vw;
   top: -10%;
   right: -10%;
-  background: radial-gradient(circle, rgba(201, 162, 39, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, var(--gold-a08) 0%, transparent 70%);
   animation-delay: 0.5s;
 }
 
@@ -413,14 +382,14 @@ a:hover { color: var(--gold-bright); }
   height: 50vh;
   bottom: -10%;
   left: 10%;
-  background: radial-gradient(ellipse, rgba(139, 26, 26, 0.12) 0%, transparent 70%);
+  background: radial-gradient(ellipse, var(--crimson-a12) 0%, transparent 70%);
   animation-delay: 0.8s;
 }
 
 .hero-vignette {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at center, transparent 40%, rgba(6, 6, 14, 0.7) 100%);
+  background: radial-gradient(ellipse at center, transparent 40%, var(--bg-void-a70) 100%);
 }
 
 @keyframes glowFade {
@@ -448,7 +417,7 @@ a:hover { color: var(--gold-bright); }
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--crimson-bright);
-  border: 1px solid rgba(181, 42, 42, 0.35);
+  border: 1px solid var(--crimson-bright-a35);
   padding: 0.3rem 1.1rem;
   margin-bottom: 2.25rem;
 }
@@ -463,8 +432,8 @@ a:hover { color: var(--gold-bright); }
   letter-spacing: 0.01em;
   margin-bottom: 2rem;
   text-shadow:
-    0 0 60px rgba(201, 162, 39, 0.1),
-    0 0 120px rgba(139, 26, 26, 0.08);
+    0 0 60px var(--gold-a10),
+    0 0 120px var(--crimson-a08);
 }
 
 .hero-rule {
@@ -588,7 +557,7 @@ a:hover { color: var(--gold-bright); }
   transform: translateY(-6px);
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(201, 162, 39, 0.05) inset;
+    0 0 0 1px var(--gold-a05) inset;
 }
 
 /* Cover */
@@ -613,8 +582,8 @@ a:hover { color: var(--gold-bright); }
   align-items: center;
   justify-content: center;
   background:
-    radial-gradient(ellipse at 30% 30%, rgba(139, 26, 26, 0.18) 0%, transparent 55%),
-    radial-gradient(ellipse at 70% 70%, rgba(201, 162, 39, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 30% 30%, var(--crimson-a18) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 70%, var(--gold-a06) 0%, transparent 50%),
     linear-gradient(160deg, var(--bg-surface) 0%, var(--bg-void) 100%);
 }
 
@@ -698,7 +667,7 @@ a:hover { color: var(--gold-bright); }
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--crimson-bright);
-  border: 1px solid rgba(181, 42, 42, 0.35);
+  border: 1px solid var(--crimson-bright-a35);
   padding: 0.22rem 0.8rem;
   width: fit-content;
 }
@@ -780,7 +749,7 @@ a:hover { color: var(--gold-bright); }
   border: 1px solid var(--border-subtle);
   overflow: hidden;
   background:
-    radial-gradient(ellipse at 40% 40%, rgba(139, 26, 26, 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 40% 40%, var(--crimson-a12) 0%, transparent 60%),
     var(--bg-surface);
   display: flex;
   align-items: center;
@@ -896,7 +865,7 @@ a:hover { color: var(--gold-bright); }
 .newsletter-atmosphere {
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 60% 50%, rgba(139, 26, 26, 0.07) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 60% 50%, var(--crimson-a07) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -1154,7 +1123,7 @@ a:hover { color: var(--gold-bright); }
 
   .about-quote {
     border-left: none;
-    border-top: 1px solid rgba(139, 26, 26, 0.4);
+    border-top: 1px solid var(--crimson-a40);
     padding-left: 0;
     padding-top: 1.25rem;
   }
@@ -1169,7 +1138,7 @@ a:hover { color: var(--gold-bright); }
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(6, 6, 14, 0.97);
+    background: var(--bg-void-a97);
     flex-direction: column;
     align-items: center;
     justify-content: center;
