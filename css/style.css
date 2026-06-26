@@ -184,26 +184,10 @@ a:hover { color: var(--gold-bright); }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
 }
 
 .section-rule--left {
   justify-content: flex-start;
-}
-
-.section-rule-line {
-  display: block;
-  width: 80px;
-  height: 1px;
-  background: var(--border-subtle);
-  flex-shrink: 0;
-}
-
-.section-rule-glyph {
-  color: var(--gold);
-  font-size: 0.7rem;
-  opacity: 0.5;
-  flex-shrink: 0;
 }
 
 /* ─── NAVIGATION ─────────────────────────────────────────── */
@@ -440,25 +424,15 @@ a:hover { color: var(--gold-bright); }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
 
-.hero-rule-line {
-  display: block;
-  width: 100px;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--border-subtle));
-}
-
-.hero-rule-line:last-child {
-  background: linear-gradient(to left, transparent, var(--border-subtle));
-}
-
-.hero-rule-glyph {
+.rule-arrow {
+  width: 220px;
+  height: auto;
   color: var(--gold);
-  font-size: 0.75rem;
-  opacity: 0.55;
+  opacity: 0.4;
+  display: block;
 }
 
 .hero-byline {
