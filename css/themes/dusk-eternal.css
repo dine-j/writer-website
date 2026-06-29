@@ -1,0 +1,72 @@
+/* ══════════════════════════════════════════════════════════
+   THEME: Mixed Claude
+   Violet-void depth · plum shadow warmth · burgundy & warm gold
+   Blends dark-gothic's black depth with royal-gothic's plum
+   richness — backgrounds share a coherent violet-to-plum hue
+   throughout, avoiding the blue/purple hue clash of mixed.css
+   ══════════════════════════════════════════════════════════
+
+   HOW TO CREATE A NEW THEME
+   1. Duplicate this file and rename it (e.g. ivory-light.css)
+   2. Update the @import URL for your chosen Google Fonts
+   3. Edit the base colours in the "Palette" section
+   4. Update the alpha variants below them — each comment
+      shows the opacity and which component it controls
+   5. In current.css, swap the active @import line
+   ══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+:root {
+  /* ── Backgrounds ─────────────────────────────────────── */
+  --bg-void:    #080610;  /* near-black with faintest violet — depth of dark-gothic */
+  --bg-dark:    #0e0c18;  /* deep violet shadow — coherent hue step from void */
+  --bg-surface: #1a1520;  /* plum shadow — warmth of royal-gothic begins here */
+  --bg-raised:  #1e2028;  /* rich plum — cards and raised elements */
+
+  /* ── Text ────────────────────────────────────────────── */
+  --text:       #F1ECE4;  /* royal-gothic parchment — brighter, better contrast */
+  --text-dim:   #C4B8AC;  /* warm cream-dim */
+  --text-muted: #7a6f65;
+  --text-faint: #8D8287;  /* royal-gothic mauve-gray — suits the plum darks */
+
+  /* ── Brand colours ───────────────────────────────────── */
+  --crimson:        #8a1d2d;  /* blend: dark-gothic blood depth + royal-gothic burgundy */
+  --crimson-bright: #c0314a;  /* royal-gothic brightness, slightly deeper */
+  --gold:           #c9a53f;  /* warm between dark-gothic's cool yellow and royal's honey */
+  --gold-bright:    #e0bc45;
+
+  /* ── Alpha variants: gold ────────────────────────────── */
+  --gold-dim:        color-mix(in srgb, var(--gold) 18%, transparent); /* gold 18% — existing token */
+  --gold-a05:        color-mix(in srgb, var(--gold) 5%, transparent);  /* gold  5% — book-card inset shadow */
+  --gold-a06:        color-mix(in srgb, var(--gold) 6%, transparent);  /* gold  6% — book-cover-art gradient */
+  --gold-a08:        color-mix(in srgb, var(--gold) 8%, transparent);  /* gold  8% — hero glow */
+  --gold-a10:        color-mix(in srgb, var(--gold) 10%, transparent); /* gold 10% — hero-hook text-shadow */
+
+  /* ── Alpha variants: crimson ─────────────────────────── */
+  --crimson-a07:        color-mix(in srgb, var(--crimson) 7%, transparent);         /* crimson  7% — newsletter atmosphere */
+  --crimson-a08:        color-mix(in srgb, var(--crimson) 8%, transparent);         /* crimson  8% — hero-hook text-shadow */
+  --crimson-a12:        color-mix(in srgb, var(--crimson) 12%, transparent);        /* crimson 12% — hero glow deep, portrait bg */
+  --crimson-a18:        color-mix(in srgb, var(--crimson) 18%, transparent);        /* crimson 18% — book-cover-art gradient */
+  --crimson-a25:        color-mix(in srgb, var(--crimson) 25%, transparent);        /* crimson 25% — hero glow */
+  --crimson-a40:        color-mix(in srgb, var(--crimson) 40%, transparent);        /* crimson 40% — about-quote mobile border */
+  --crimson-bright-a35: color-mix(in srgb, var(--crimson-bright) 35%, transparent); /* crimson-bright 35% — hero-label & book-badge border */
+
+  /* ── Alpha variants: backgrounds ─────────────────────── */
+  --bg-void-a70: color-mix(in srgb, var(--bg-void) 70%, transparent); /* bg-void 70% — hero vignette */
+  --bg-void-a92: color-mix(in srgb, var(--bg-void) 92%, transparent); /* bg-void 92% — scrolled nav background */
+  --bg-void-a97: color-mix(in srgb, var(--bg-void) 97%, transparent); /* bg-void 97% — mobile nav overlay */
+
+  /* ── Alpha variants: text ────────────────────────────── */
+  --text-a25: color-mix(in srgb, var(--text) 25%, transparent); /* text 25% — ghost button border */
+
+  /* ── Borders ─────────────────────────────────────────── */
+  --border-dim:    color-mix(in srgb, var(--gold) 12%, transparent);
+  --border-subtle: color-mix(in srgb, var(--gold) 22%, transparent);
+  --border-hover:  color-mix(in srgb, var(--gold) 45%, transparent);
+
+  /* ── Type ────────────────────────────────────────────── */
+  --font-display: 'Cinzel Decorative', 'Palatino Linotype', serif;
+  --font-heading: 'Cinzel', 'Palatino Linotype', serif;
+  --font-body:    'EB Garamond', 'Garamond', Georgia, serif;
+}
