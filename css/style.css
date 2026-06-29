@@ -191,21 +191,6 @@ a:hover { color: var(--gold-bright); }
   justify-content: flex-start;
 }
 
-.section-rule-line {
-  display: block;
-  width: 80px;
-  height: 1px;
-  background: var(--border-subtle);
-  flex-shrink: 0;
-}
-
-.section-rule-glyph {
-  color: var(--gold);
-  font-size: 0.7rem;
-  opacity: 0.5;
-  flex-shrink: 0;
-}
-
 /* ─── NAVIGATION ─────────────────────────────────────────── */
 
 .nav {
@@ -444,21 +429,24 @@ a:hover { color: var(--gold-bright); }
   margin-bottom: 1.25rem;
 }
 
-.hero-rule-line {
-  display: block;
-  width: 100px;
-  height: 1px;
-  background: linear-gradient(to right, transparent, var(--border-subtle));
-}
-
-.hero-rule-line:last-child {
-  background: linear-gradient(to left, transparent, var(--border-subtle));
-}
-
-.hero-rule-glyph {
+.rule-arrow {
+  width: 80px;
+  height: auto;
   color: var(--gold);
-  font-size: 0.75rem;
-  opacity: 0.55;
+  opacity: 0.22;
+  display: block;
+  flex-shrink: 0;
+}
+
+.hero-rule .rule-arrow {
+  width: 100px;
+}
+
+.rule-glyph {
+  color: var(--gold);
+  font-size: 0.7rem;
+  opacity: 0.5;
+  flex-shrink: 0;
 }
 
 .hero-byline {
@@ -1014,16 +1002,9 @@ a:hover { color: var(--gold-bright); }
   max-width: 300px;
 }
 
-.footer-rule-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border-dim);
-}
-
-.footer-rule-glyph {
-  color: var(--gold);
-  font-size: 0.65rem;
-  opacity: 0.4;
+.footer-rule .rule-arrow {
+  height: 10px;
+  width: auto;
 }
 
 .footer-nav {
