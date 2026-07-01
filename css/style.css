@@ -690,7 +690,7 @@ a:hover { color: var(--gold-bright); }
 
 .book-blurb {
   color: var(--text-dim);
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.65;
   flex: 1;
   margin-top: 0.25rem;
@@ -800,7 +800,8 @@ a:hover { color: var(--gold-bright); }
 
 .about-bio p {
   color: var(--text-dim);
-  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  font-size: clamp(1.25rem, 1vw, 1.50rem);
+  text-align: justify;
 }
 
 .about-quote {
@@ -879,7 +880,7 @@ a:hover { color: var(--gold-bright); }
 
 .newsletter-desc {
   color: var(--text-dim);
-  font-size: clamp(1rem, 1.4vw, 1.1rem);
+  font-size: clamp(1.15rem, 1.4vw, 1.20rem);
   line-height: 1.75;
 }
 
