@@ -6,7 +6,7 @@
 
   <!-- ── Primary meta ───────────────────────────────────────── -->
   <title>Chloe Mandel — Dark Gothic Fantasy Author</title>
-  <meta name="description" content="Chloe Mandel writes dark and gothic fantasy. Debut novel coming soon.">
+  <meta name="description" content="Chloe Mandel writes dark and gothic fantasy. Debut novel Curse of Nohvan coming soon.">
   <meta name="author" content="Chloe Mandel">
 
   <!-- ── Favicon ────────────────────────────────────────────── -->
@@ -29,6 +29,52 @@
   <meta name="twitter:title"       content="Chloe Mandel — Dark Gothic Fantasy Author">
   <meta name="twitter:description" content="Chloe Mandel writes dark and gothic fantasy. Debut novel coming soon.">
   <meta name="twitter:image"       content="https://chloemandel.com/images/og-image.jpg">
+
+  <!-- ── Canonical ────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://chloemandel.com">
+
+  <!-- ── Structured data ───────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://chloemandel.com/#author",
+        "name": "Chloe Mandel",
+        "description": "London-based dark gothic fantasy author",
+        "url": "https://chloemandel.com",
+        "sameAs": [
+          "https://www.instagram.com/chloemandelwrites",
+          "https://bsky.app/profile/chloemandel.bsky.social",
+          "https://www.facebook.com/profile.php?id=61591605517457"
+        ]
+      },
+      {
+        "@type": "Book",
+        "@id": "https://chloemandel.com/#book-welcome-to-variska",
+        "name": "Welcome to Variska",
+        "alternateName": "Curse of Nohvan: Welcome to Variska",
+        "author": { "@id": "https://chloemandel.com/#author" },
+        "genre": "Dark Gothic Fantasy",
+        "isPartOf": {
+          "@type": "BookSeries",
+          "name": "Curse of Nohvan"
+        },
+        "description": "A simple escort mission. A cursed valley. A stranger he was never meant to protect — and now can't abandon.",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://chloemandel.com/#website",
+        "name": "Chloe Mandel",
+        "url": "https://chloemandel.com",
+        "description": "Chloe Mandel writes dark and gothic fantasy. Debut novel Curse of Nohvan coming soon.",
+        "author": { "@id": "https://chloemandel.com/#author" }
+      }
+    ]
+  }
+  </script>
 
   <!-- ── Theme (edit css/themes/current.css to switch themes) ── -->
   <link rel="stylesheet" href="css/themes/current.css">
