@@ -15,8 +15,6 @@
    5. In current.css, swap the active @import line
    ══════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
-
 :root {
   /* ── Backgrounds ─────────────────────────────────────── */
   --bg-void:    #080610;  /* near-black with faintest violet — depth of dark-gothic */
