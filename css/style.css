@@ -1136,6 +1136,15 @@ a:hover { color: var(--gold-bright); }
     align-self: center;
   }
 
+  .book-cover-reveal {
+    padding: 2rem 1.25rem;
+  }
+
+  .book-cover-reveal-text {
+    font-size: 1.15rem;
+    max-width: none;
+  }
+
   .about-inner {
     grid-template-columns: 1fr;
     gap: 3.5rem;
