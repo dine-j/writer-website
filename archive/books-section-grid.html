@@ -1,0 +1,164 @@
+<!--
+  ARCHIVED: multi-book grid layout for the Books section.
+
+  Replaced by the single-book "spotlight" layout in index.html when there was
+  only one book to show. Bring this back once book 2 exists — duplicate the
+  <article class="book-card"> block per book, drop the whole section back into
+  index.html in place of the current .book-spotlight markup, and merge the
+  <style> block below back into css/style.css.
+
+  Depends on the shared classes still living in css/style.css:
+  .book-cover(-inner/-art/-title-card/-series/-divider/-subtitle/-author/-placeholder-note/-frame),
+  .book-badge, .book-series, .book-title, .book-genre, .book-hook, .btn
+-->
+<section id="books" class="section section--books fade-in">
+  <div class="container">
+
+    <header class="section-header">
+      <span class="section-eyebrow">The Library</span>
+      <h2 class="section-title">Books</h2>
+      <div class="section-rule" aria-hidden="true">
+        <svg class="rule-arrow rule-arrow--left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 60"><rect x="74" y="27" width="346" height="6" fill="currentColor"/><polygon points="415,10 401,10 381,30 401,50 415,50 395,30" fill="currentColor"/><polygon points="393,10 379,10 359,30 379,50 393,50 373,30" fill="currentColor"/><polygon points="371,10 357,10 337,30 357,50 371,50 351,30" fill="currentColor"/><path d="M 85,5 Q 40,25 10,30 Q 40,35 85,55 Q 65,30 85,5 Z" fill="currentColor"/></svg>
+        <span class="rule-glyph">✧</span>
+        <svg class="rule-arrow rule-arrow--right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 60"><rect x="10" y="27" width="346" height="6" fill="currentColor"/><polygon points="15,10 29,10 49,30 29,50 15,50 35,30" fill="currentColor"/><polygon points="37,10 51,10 71,30 51,50 37,50 57,30" fill="currentColor"/><polygon points="59,10 73,10 93,30 73,50 59,50 79,30" fill="currentColor"/><path d="M 345,5 Q 390,25 420,30 Q 390,35 345,55 Q 365,30 345,5 Z" fill="currentColor"/></svg>
+      </div>
+    </header>
+
+    <div class="books-grid">
+
+      <!-- Book 1 -->
+      <article class="book-card fade-in">
+        <!-- Temporary book cover -->
+         <div class="book-cover" aria-label="Curse of Nohvan: Welcome to Variska — cover art coming soon">
+          <div class="book-cover-inner">
+            <div class="book-cover-art">
+              <div class="book-cover-title-card">
+                <span class="book-cover-series">Curse of Nohvan</span>
+                <div class="book-cover-divider" aria-hidden="true"></div>
+                <span class="book-cover-subtitle">Welcome to Variska</span>
+                <span class="book-cover-author">Chloe Mandel</span>
+                <span class="book-cover-placeholder-note">Cover art coming soon</span>
+              </div>
+            </div>
+            <div class="book-cover-frame"></div>
+          </div>
+        </div>
+        <!-- Final art cover -->
+        <!-- <div class="book-cover">
+          <div class="book-cover-inner">
+            <img class="book-cover-art" src="images/book1.jpeg" alt="Curse of Nohvan: Welcome to Variska by Chloe Mandel">
+            <div class="book-cover-frame"></div>
+          </div>
+        </div> -->
+
+        <div class="book-info">
+          <span class="book-badge">Coming Soon</span>
+          <p class="book-series">Curse of Nohvan</p>
+          <h3 class="book-title">Welcome to Variska</h3>
+          <p class="book-genre">Dark Gothic Fantasy</p>
+          <p class="book-hook">
+            A simple escort mission.
+            <br>A cursed valley.
+            <br>A stranger he was never meant to protect — and now can't abandon.
+          </p>
+          <details class="book-blurb-reveal">
+            <summary>Read more</summary>
+            <div class="book-blurb">
+              <p>They came for coin and pies; now this cursed land may very well eat them alive.</p>
+              <p>Nohvan, a talented hunter, and his companions—a quiet paladin, a volatile mage, an earnest bard and a feathered wanderer—are trapped in Variska after a simple escort mission turns into a demon hunt. When Aurelia arrives like a mirror of someone Nohvan loves, he must protect her from the vampire ruling the valley and find a way out of this hell.</p>
+              <p>Between the hungry creatures lurking in the night and dangerous alliances, protection comes at a cost and not every bargain is worth taking... Nohvan must decide what he will give—their trust or the only kind of family he has left.</p>
+            </div>
+          </details>
+          <a href="#newsletter" class="btn btn--outline btn--sm">Stay Updated</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Grid-specific rules, removed from css/style.css when the spotlight
+   layout took over — merge these back in alongside the markup above. */
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+}
+
+.book-card {
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border-dim);
+  background: var(--bg-raised);
+  transition:
+    border-color var(--dur-med) var(--ease-smooth),
+    transform var(--dur-med) var(--ease-smooth),
+    box-shadow var(--dur-med) var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px var(--gold-a05) inset;
+}
+
+.book-card:hover .book-cover-frame {
+  border-color: var(--border-subtle);
+}
+
+.book-info {
+  padding: 1.75rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex: 1;
+}
+
+.book-info .book-hook {
+  flex: 1;
+}
+
+.book-info .btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.fade-in.is-visible .book-card:nth-child(2) { transition-delay: 0.12s; }
+.fade-in.is-visible .book-card:nth-child(3) { transition-delay: 0.24s; }
+
+/* "Read more" reveal for the full blurb */
+.book-blurb-reveal summary {
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  list-style: none;
+}
+
+.book-blurb-reveal summary::-webkit-details-marker { display: none; }
+
+.book-blurb-reveal summary:hover { color: var(--gold-bright); }
+
+.book-blurb-reveal[open] summary { margin-bottom: 0.65rem; }
+
+.book-blurb-reveal .book-blurb {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.book-blurb-reveal .book-blurb p {
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+</style>
