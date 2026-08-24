@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Welcome to Variska — Chloe Mandel</title>
+  <title>Chloe Mandel — Dark Epic Fantasy</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap');
 
@@ -23,15 +23,45 @@
       -ms-interpolation-mode: bicubic;
     }
     a { color: inherit; }
+
+    /* Styling for the broadcast/sequence content Kit inserts via {{ message_content }} */
+    .email-body h1, .email-body h2, .email-body h3 {
+      font-family: 'Cinzel', 'Palatino Linotype', serif;
+      font-weight: 400;
+      color: #F1ECE4;
+      margin: 0 0 24px;
+    }
+    .email-body p {
+      margin: 0 0 18px;
+      line-height: 1.8;
+    }
+    .email-body a {
+      color: #c0314a;
+      text-decoration: underline;
+    }
+    .email-body em, .email-body strong {
+      color: #F1ECE4;
+    }
+    .email-body blockquote {
+      margin: 0 0 18px;
+      padding-left: 16px;
+      border-left: 3px solid #8a1d2d;
+      font-style: italic;
+      color: #7a6f65;
+    }
   </style>
 </head>
 
 <!--
-  MERGE TAGS — verify exact syntax in your Email Octopus account under
-  Campaigns → Help → Merge Tags before sending.
+  KIT TEMPLATE — this is a reusable template applied to broadcasts/sequences.
+  The welcome copy (eyebrow, headline, body, signature) lives in the Kit
+  message editor, not in this file — it's inserted via {{ message_content }}.
 
-  Subscriber name  : replace FIRST_NAME_HERE below (or remove the greeting line)
-  Unsubscribe URL  : replace UNSUBSCRIBE_URL_HERE in the footer
+  Merge tags used below:
+    {{ message_content }}            body written per broadcast/sequence
+    {{ address }}                     your Kit account's mailing address (compliance)
+    {{ unsubscribe_url }}             unsubscribe URL (custom link text)
+    {{ subscriber_preferences_url }}  preferences URL (custom link text)
 -->
 
 <body style="margin:0;padding:0;background-color:#080610;">
@@ -63,7 +93,7 @@
                          letter-spacing:0.25em;
                          text-transform:uppercase;
                          color:#c9a53f;">
-                Dark Gothic Fantasy
+                Dark Epic Fantasy
               </p>
 
               <h1 style="margin:0;
@@ -91,82 +121,14 @@
 
           <!-- ── BODY ── -->
           <tr>
-            <td align="left" bgcolor="#1a1520"
-                style="background-color:#1a1520;padding:36px 40px 40px;">
+            <td align="left" bgcolor="#1a1520" class="email-body"
+                style="background-color:#1a1520;padding:36px 40px 40px;
+                       font-family:Georgia,'Times New Roman',serif;
+                       font-size:16px;
+                       color:#C4B8AC;
+                       line-height:1.8;">
 
-              <!-- Eyebrow -->
-              <p style="margin:0 0 22px;
-                         font-family:'Cinzel','Palatino Linotype',serif;
-                         font-size:10px;
-                         letter-spacing:0.22em;
-                         text-transform:uppercase;
-                         color:#c0314a;">
-                You're in.
-              </p>
-
-              <!-- Headline -->
-              <h2 style="margin:0 0 24px;
-                          font-family:'Cinzel','Palatino Linotype',serif;
-                          font-size:20px;
-                          font-weight:400;
-                          color:#F1ECE4;
-                          line-height:1.5;">
-                Welcome to Variska.
-              </h2>
-
-              <!-- Body copy -->
-              <p style="margin:0 0 18px;
-                         font-family:Georgia,'Times New Roman',serif;
-                         font-size:16px;
-                         color:#C4B8AC;
-                         line-height:1.8;">
-                <!-- Replace FIRST_NAME_HERE with your Email Octopus merge tag, or remove the line -->
-                Hello FIRST_NAME_HERE,
-              </p>
-
-              <p style="margin:0 0 18px;
-                         font-family:Georgia,'Times New Roman',serif;
-                         font-size:16px;
-                         color:#C4B8AC;
-                         line-height:1.8;">
-                Or rather — welcome to the mailing list of someone who writes about it.
-                Small but meaningful distinction.
-              </p>
-
-              <p style="margin:0 0 18px;
-                         font-family:Georgia,'Times New Roman',serif;
-                         font-size:16px;
-                         color:#C4B8AC;
-                         line-height:1.8;">
-                You're now among the first to hear about
-                <em style="color:#F1ECE4;">Curse of Nohvan: Welcome to Variska</em>
-                — cover reveals, release dates, and the occasional dispatch
-                from beyond the mists.
-              </p>
-
-              <p style="margin:0 0 36px;
-                         font-family:Georgia,'Times New Roman',serif;
-                         font-size:16px;
-                         color:#C4B8AC;
-                         line-height:1.8;">
-                I'm glad you're here.
-              </p>
-
-              <!-- Signature -->
-              <p style="margin:0 0 4px;
-                         font-family:'Cinzel','Palatino Linotype',serif;
-                         font-size:16px;
-                         color:#F1ECE4;">
-                Chloe
-              </p>
-              <p style="margin:0;
-                         font-family:'Cinzel','Palatino Linotype',serif;
-                         font-size:10px;
-                         letter-spacing:0.15em;
-                         text-transform:uppercase;
-                         color:#7a6f65;">
-                Dark Gothic Fantasy Author
-              </p>
+              {{ message_content }}
 
             </td>
           </tr>
@@ -218,10 +180,14 @@
                          font-family:Georgia,'Times New Roman',serif;
                          font-size:11px;
                          color:#7a6f65;">
-                <!-- Replace UNSUBSCRIBE_URL_HERE with your Email Octopus unsubscribe merge tag -->
-                <a href="UNSUBSCRIBE_URL_HERE"
+                <a href="{{ unsubscribe_url }}"
                    style="color:#8D8287;text-decoration:underline;">
                   Unsubscribe
+                </a>
+                &nbsp;·&nbsp;
+                <a href="{{ subscriber_preferences_url }}"
+                   style="color:#8D8287;text-decoration:underline;">
+                  Update preferences
                 </a>
               </p>
 
