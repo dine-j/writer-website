@@ -1,17 +1,25 @@
 /* ─── STANDALONE NEWSLETTER PAGE (/newsletter) ──────────────
    Styles specific to newsletter/index.html only. */
 
-.newsletter-cover {
-  width: 132px;
-  margin-bottom: 0.5rem;
+@media (min-width: 761px) {
+  .newsletter-inner.newsletter-inner--standalone {
+    grid-template-columns: minmax(200px, 280px) 1fr;
+    gap: clamp(2.5rem, 5vw, 4rem);
+  }
 }
 
-.newsletter-cover .book-cover-reveal {
-  padding: 1rem;
-  gap: 0.4rem;
+.newsletter-cover-col {
+  display: flex;
+  justify-content: center;
 }
 
-.newsletter-cover .book-cover-reveal-eyebrow {
-  font-size: 0.55rem;
-  letter-spacing: 0.22em;
+.newsletter-cover-col .book-cover {
+  width: 100%;
+  max-width: 280px;
+}
+
+.newsletter-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
