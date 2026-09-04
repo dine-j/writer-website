@@ -537,7 +537,7 @@ a:hover { color: var(--gold-bright); }
 
 /* Cover */
 .book-cover {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 87 / 128;
   overflow: hidden;
   border-bottom: 1px solid var(--border-dim);
   position: relative;
