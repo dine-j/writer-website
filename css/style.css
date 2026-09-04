@@ -535,6 +535,11 @@ a:hover { color: var(--gold-bright); }
   border-bottom: none;
 }
 
+.book-spotlight-cover .btn {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
 /* Cover */
 .book-cover {
   aspect-ratio: 87 / 128;
@@ -1209,6 +1214,10 @@ a:hover { color: var(--gold-bright); }
     width: 100%;
     max-width: 260px;
     justify-content: center;
+  }
+
+  .book-spotlight-cover .btn {
+    max-width: none;
   }
 }
 
