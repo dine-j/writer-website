@@ -31,6 +31,7 @@
   /* ── Brand colours ───────────────────────────────────── */
   --crimson:        #8a1d2d;  /* blend: dark-gothic blood depth + royal-gothic burgundy */
   --crimson-bright: #c0314a;  /* royal-gothic brightness, slightly deeper */
+  --crimson-glow:   #d6455f;  /* lightened crimson-bright — ~4.7:1 on bg-void, for small badge text */
   --gold:           #c9a53f;  /* warm between dark-gothic's cool yellow and royal's honey */
   --gold-bright:    #e0bc45;
 

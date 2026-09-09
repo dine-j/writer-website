@@ -398,10 +398,11 @@ a:hover { color: var(--gold-bright); }
 .hero-label {
   display: inline-block;
   font-family: var(--font-heading);
-  font-size: 0.62rem;
-  letter-spacing: 0.3em;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--crimson-bright);
+  color: var(--crimson-glow);
   border: 1px solid var(--crimson-bright-a35);
   padding: 0.3rem 1.1rem;
   margin-bottom: 2.25rem;
@@ -683,10 +684,11 @@ a:hover { color: var(--gold-bright); }
 
 .book-badge {
   font-family: var(--font-heading);
-  font-size: 0.6rem;
-  letter-spacing: 0.22em;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--crimson-bright);
+  color: var(--crimson-glow);
   border: 1px solid var(--crimson-bright-a35);
   padding: 0.22rem 0.8rem;
   width: fit-content;
