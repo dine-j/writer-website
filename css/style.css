@@ -11,6 +11,7 @@
   --dur-fast:    0.2s;
   --dur-med:     0.35s;
   --dur-slow:    0.6s;
+  --body-copy-size: clamp(1.25rem, 1vw, 1.50rem);
 }
 
 /* ─── RESET ──────────────────────────────────────────────── */
@@ -720,7 +721,7 @@ a:hover { color: var(--gold-bright); }
 
 .book-hook {
   color: var(--text-dim);
-  font-size: clamp(1.25rem, 1vw, 1.50rem);
+  font-size: var(--body-copy-size);
   line-height: 1.65;
   margin-top: 0.25rem;
 }
@@ -736,7 +737,7 @@ a:hover { color: var(--gold-bright); }
 
 .book-blurb p {
   color: var(--text-dim);
-  font-size: clamp(1.25rem, 1vw, 1.50rem);
+  font-size: var(--body-copy-size);
   line-height: 1.7;
   text-align: justify;
 }
@@ -845,7 +846,7 @@ a:hover { color: var(--gold-bright); }
 
 .about-bio p {
   color: var(--text-dim);
-  font-size: clamp(1.25rem, 1vw, 1.50rem);
+  font-size: var(--body-copy-size);
   text-align: justify;
 }
 
@@ -860,6 +861,24 @@ a:hover { color: var(--gold-bright); }
   font-size: clamp(1rem, 1.8vw, 1.2rem);
   color: var(--text-dim);
   line-height: 1.6;
+}
+
+/* ─── ARC READERS ────────────────────────────────────────── */
+
+.arc-content {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.arc-desc {
+  color: var(--text-dim);
+  font-size: var(--body-copy-size);
+  line-height: 1.75;
 }
 
 /* ─── NEWSLETTER ─────────────────────────────────────────── */
@@ -925,7 +944,7 @@ a:hover { color: var(--gold-bright); }
 
 .newsletter-desc {
   color: var(--text-dim);
-  font-size: clamp(1.15rem, 1.4vw, 1.20rem);
+  font-size: var(--body-copy-size);
   line-height: 1.75;
 }
 
