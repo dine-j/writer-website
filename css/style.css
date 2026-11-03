@@ -542,6 +542,78 @@ a:hover { color: var(--gold-bright); }
   margin-top: 1.25rem;
 }
 
+/* ─── BUY DIALOG ─────────────────────────────────────────── */
+
+.buy-dialog {
+  margin: auto;
+  width: min(92vw, 26rem);
+  padding: 2.5rem 2rem 2rem;
+  background: var(--bg-surface);
+  color: var(--text);
+  border: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.buy-dialog::backdrop {
+  background: var(--bg-void-a92);
+}
+
+.buy-dialog-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  background: none;
+  border: 0;
+  color: var(--text-dim);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.buy-dialog-close:hover { color: var(--text); }
+
+.buy-dialog-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.buy-dialog-label {
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 1.25rem 0 0.6rem;
+}
+
+.buy-dialog-list {
+  list-style: none;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.buy-link {
+  display: block;
+  padding: 0.8rem 1rem;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border-subtle);
+  transition:
+    background var(--dur-med) var(--ease-smooth),
+    border-color var(--dur-med) var(--ease-smooth);
+}
+
+.buy-link:hover {
+  background: var(--gold-dim);
+  border-color: var(--gold);
+}
+
 /* Cover */
 .book-cover {
   aspect-ratio: 87 / 128;

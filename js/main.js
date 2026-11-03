@@ -100,3 +100,18 @@ const sectionObserver = new IntersectionObserver(
 );
 
 sections.forEach(s => sectionObserver.observe(s));
+
+/* ─── BUY DIALOG ─────────────────────────────────────────── */
+
+const buyDialog = document.getElementById('buy-dialog');
+
+document.querySelectorAll('[data-buy-open]').forEach(btn => {
+  btn.addEventListener('click', () => buyDialog.showModal());
+});
+
+buyDialog.querySelector('[data-buy-close]').addEventListener('click', () => buyDialog.close());
+
+// Close when clicking the backdrop
+buyDialog.addEventListener('click', e => {
+  if (e.target === buyDialog) buyDialog.close();
+});

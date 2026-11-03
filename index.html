@@ -6,7 +6,7 @@
 
   <!-- ── Primary meta ───────────────────────────────────────── -->
   <title>Chloe Mandel — Dark Epic Fantasy Author</title>
-  <meta name="description" content="Chloe Mandel writes dark and epic fantasy. Debut novel Curse of Nohvan releases November 2, 2026.">
+  <meta name="description" content="Chloe Mandel writes dark and epic fantasy. Debut novel Curse of Nohvan is out now.">
   <meta name="author" content="Chloe Mandel">
   <meta name="theme-color" content="#c9a53f" />
   <link rel="manifest" href="/manifest.json">
@@ -22,19 +22,19 @@
   <meta property="og:type"        content="website">
   <meta property="og:site_name"   content="Chloe Mandel">
   <meta property="og:title"       content="Chloe Mandel — Dark Epic Fantasy Author">
-  <meta property="og:description" content="Welcome to the dark epic fantasy worlds of Chloe Mandel. Step into a cursed valley and discover her upcoming debut novel, Curse of Nohvan.">
+  <meta property="og:description" content="Welcome to the dark epic fantasy worlds of Chloe Mandel. Step into a cursed valley and discover her debut novel, Curse of Nohvan, out now.">
   <meta property="og:url"         content="https://chloemandel.com">
   <meta property="og:image"        content="https://chloemandel.com/images/og-image.jpg">
   <meta property="og:image:width"  content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type"   content="image/jpeg">
-  <meta property="og:image:alt" content="Dark epic fantasy teaser graphic for Chloe Mandel's upcoming debut novel, Curse of Nohvan, featuring the quote "Oh no luv', no one escapes from Variska."" />
+  <meta property="og:image:alt" content="Dark epic fantasy teaser graphic for Chloe Mandel's debut novel, Curse of Nohvan, featuring the quote "Oh no luv', no one escapes from Variska."" />
   <meta property="og:locale" content="en_GB" />
 
   <!-- ── Twitter / X Card (also used by Bluesky for previews) ─ -->
   <meta name="twitter:card"        content="summary_large_image">
   <meta name="twitter:title"       content="Chloe Mandel — Dark Epic Fantasy Author">
-  <meta name="twitter:description" content="Chloe Mandel writes dark and epic fantasy. Debut novel releases November 2, 2026.">
+  <meta name="twitter:description" content="Chloe Mandel writes dark and epic fantasy. Debut novel Curse of Nohvan is out now.">
   <meta name="twitter:image"       content="https://chloemandel.com/images/og-image.jpg">
 
   <!-- ── Canonical ────────────────────────────────────────────── -->
@@ -72,19 +72,21 @@
         "description": "A simple escort mission. A cursed valley. A stranger he was never meant to protect — and now can't abandon.",
         "inLanguage": "en",
         "datePublished": "2026-11-02",
-        "offers": {
-          "@type": "Offer",
-          "url": "https://www.amazon.com/dp/PLACEHOLDER",
-          "availability": "https://schema.org/PreOrder",
-          "priceCurrency": "USD"
-        }
+        "offers": [
+          { "@type": "Offer", "name": "Ebook on Amazon", "url": "https://mybook.to/curse-of-nohvan", "availability": "https://schema.org/InStock", "price": "4.99", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Ebook on Kobo", "url": "https://www.kobo.com/gb/en/ebook/curse-of-nohvan", "availability": "https://schema.org/InStock", "price": "4.99", "priceCurrency": "GBP" },
+          { "@type": "Offer", "name": "Ebook on Google Play", "url": "https://play.google.com/store/books/details?id=YDoiEgAAQBAJ", "availability": "https://schema.org/InStock", "price": "4.99", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Paperback on Amazon", "url": "https://mybook.to/curse-of-nohvan-paper", "availability": "https://schema.org/InStock", "price": "19.99", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Paperback on Barnes & Noble", "url": "https://www.barnesandnoble.com/w/curse-of-nohvan-chloe-mandel/1151806192", "availability": "https://schema.org/InStock", "price": "19.99", "priceCurrency": "USD" },
+          { "@type": "Offer", "name": "Paperback on Waterstones", "url": "https://www.waterstones.com/book/curse-of-nohvan/chloe-mandel/9781066966714", "availability": "https://schema.org/InStock", "price": "12.99", "priceCurrency": "GBP" }
+        ]
       },
       {
         "@type": "WebSite",
         "@id": "https://chloemandel.com/#website",
         "name": "Chloe Mandel",
         "url": "https://chloemandel.com",
-        "description": "Chloe Mandel writes dark and epic fantasy. Debut novel Curse of Nohvan releases November 2, 2026.",
+        "description": "Chloe Mandel writes dark and epic fantasy. Debut novel Curse of Nohvan is out now.",
         "author": { "@id": "https://chloemandel.com/#author" }
       }
     ]
@@ -160,7 +162,7 @@
       </div>
 
       <div class="hero-content">
-        <span class="hero-label">Debut Novel &mdash; Nov 2, 2026</span>
+        <span class="hero-label">Debut Novel &mdash; Out Now</span>
 
         <h1 class="hero-hook">
           Oh no luv',<br>no one escapes from Variska.
@@ -176,7 +178,7 @@
         <p class="hero-genre">A Dark Epic Fantasy Novel</p>
 
         <div class="hero-actions">
-          <a href="#books" class="btn btn--primary">Discover the Book</a>
+          <button type="button" class="btn btn--primary" data-buy-open>Get the Book</button>
           <a href="#about" class="btn btn--ghost">About the Author</a>
         </div>
       </div>
@@ -212,13 +214,11 @@
                 <!-- <div class="book-cover-frame"></div> -->
               </div>
             </div>
-            <!-- TODO: replace with the real Amazon pre-order link -->
-            <a href="https://mybook.to/curse-of-nohvan" class="btn btn--primary btn--sm" rel="noopener noreferrer">Pre-order on Amazon</a>
-            <a href="#newsletter" class="btn btn--outline btn--sm">Get Chapter One Free</a>
+            <button type="button" class="btn btn--primary btn--sm" data-buy-open>Buy Now</button>
           </div>
 
           <div class="book-spotlight-content">
-            <span class="book-badge">Pre-order Available &middot; Nov 2, 2026</span>
+            <span class="book-badge">Out Now &middot; Nov 2, 2026</span>
             <p class="book-series">Curse of Nohvan</p>
             <h3 class="book-title">Welcome to Variska</h3>
             <p class="book-genre">Dark Epic Fantasy</p>
@@ -323,7 +323,7 @@
             <span class="section-eyebrow">Free gift for subscribers</span>
             <h2 class="newsletter-title">Chapter one, free</h2>
             <p class="newsletter-desc">
-              Subscribe to receive the opening chapter of <em>Curse of Nohvan</em> instantly, plus cover reveals, release dates and other updates from beyond the mists.
+              Subscribe to receive the opening chapter of <em>Curse of Nohvan</em> instantly, plus cover reveals, new releases and other updates from beyond the mists.
             </p>
           </div>
           
@@ -386,6 +386,25 @@
       </div>
     </div>
   </footer>
+
+  <dialog class="buy-dialog" id="buy-dialog" aria-labelledby="buy-dialog-title">
+    <button type="button" class="buy-dialog-close" data-buy-close aria-label="Close">&times;</button>
+    <h2 class="buy-dialog-title" id="buy-dialog-title">Get <em>Welcome to Variska</em></h2>
+
+    <p class="buy-dialog-label">Ebook</p>
+    <ul class="buy-dialog-list">
+      <li><a href="https://mybook.to/curse-of-nohvan" class="buy-link" rel="noopener noreferrer">Amazon</a></li>
+      <li><a href="https://www.kobo.com/gb/en/ebook/curse-of-nohvan" class="buy-link" rel="noopener noreferrer">Kobo</a></li>
+      <li><a href="https://play.google.com/store/books/details?id=YDoiEgAAQBAJ" class="buy-link" rel="noopener noreferrer">Google Play</a></li>
+    </ul>
+
+    <p class="buy-dialog-label">Paperback</p>
+    <ul class="buy-dialog-list">
+      <li><a href="https://mybook.to/curse-of-nohvan-paper" class="buy-link" rel="noopener noreferrer">Amazon</a></li>
+      <li><a href="https://www.barnesandnoble.com/w/curse-of-nohvan-chloe-mandel/1151806192" class="buy-link" rel="noopener noreferrer">Barnes &amp; Noble</a></li>
+      <li><a href="https://www.waterstones.com/book/curse-of-nohvan/chloe-mandel/9781066966714" class="buy-link" rel="noopener noreferrer">Waterstones</a></li>
+    </ul>
+  </dialog>
 
   <script src="js/main.js"></script>
 </body>
