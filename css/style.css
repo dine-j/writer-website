@@ -814,6 +814,47 @@ a:hover { color: var(--gold-bright); }
   text-align: justify;
 }
 
+.book-reviews {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Desktop only: below 860px each quote already has its own top rule */
+@media (min-width: 861px) {
+  .book-reviews {
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-dim);
+  }
+}
+
+.book-review {
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--crimson);
+}
+
+.book-review blockquote {
+  font-family: 'Lora', var(--font-body);
+  font-style: italic;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.book-review figcaption {
+  margin-top: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.book-review figcaption a {
+  color: var(--crimson-glow);
+}
+
 .book-spotlight-content .btn {
   align-self: flex-start;
   margin-top: 0.5rem;
@@ -1232,6 +1273,28 @@ a:hover { color: var(--gold-bright); }
 
   .book-spotlight-content .btn {
     align-self: center;
+  }
+
+  .book-review {
+    border-left: none;
+    border-top: 1px solid var(--crimson-a40);
+    padding-left: 0;
+    padding-top: 1.25rem;
+  }
+
+  /* Run the Goodreads link on at the end of the quote */
+  .book-review blockquote,
+  .book-review blockquote p,
+  .book-review figcaption {
+    display: inline;
+  }
+
+  .book-review figcaption {
+    margin-left: 0.3rem;
+  }
+
+  .book-review figcaption::before {
+    content: "\2014\00a0";
   }
 
   .book-cover-reveal {
